@@ -2,25 +2,23 @@
   let { word = null, allWords = [], onResult = () => {} } = $props();
   let selected = $state(null);
   let revealed = $state(false);
-  let options = $state([]);
 
-  // Re-shuffle only when the word changes
-  $effect(() => {
-    if (!word || allWords.length < 4) {
-      options = [];
-      return;
-    }
-    // Pick 3 distractors at similar difficulty
+  // Compute options reactively from word and allWords
+  let options = $derived.by(() => {
+    if (!word || allWords.length < 4) return [];
     const similar = allWords
       .filter(w => w.word !== word.word && Math.abs(w.difficulty - word.difficulty) <= 1)
       .sort(() => Math.random() - 0.5);
-    const distractorCount = Math.min(3, similar.length);
-    const distractors = similar.slice(0, distractorCount).map(w => w.meaning);
-    const opts = [word.meaning, ...distractors].sort(() => Math.random() - 0.5);
-    options = opts;
+    const distractors = similar.slice(0, Math.min(3, similar.length)).map(w => w.meaning);
+    return [word.meaning, ...distractors].sort(() => Math.random() - 0.5);
   });
 
   let correctAnswer = $derived(word?.meaning || '');
+
+  // Reset UI state when word changes
+  $effect(() => {
+    if (word) { selected = null; revealed = false; }
+  });
 
   function select(opt) {
     if (revealed) return;
