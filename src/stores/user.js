@@ -1,4 +1,4 @@
-import { writable, derived } from 'svelte/store';
+import { writable } from 'svelte/store';
 import { get, set, STORAGE_KEYS } from '../lib/storage.js';
 import { checkNewBadges } from '../lib/badges.js';
 
@@ -73,6 +73,13 @@ function createUserStore() {
           allMastered: state.allMastered
         });
         return state;
+      });
+    },
+    resetStreak() {
+      update(state => {
+        const result = { ...state, streak: 0 };
+        set(STORAGE_KEYS.USER, result);
+        return result;
       });
     },
     addXP(amount) {
