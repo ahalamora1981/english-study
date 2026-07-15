@@ -1,0 +1,83 @@
+import { writable } from 'svelte/store';
+import rawWords from '../lib/words.json';
+import { createMasteryRecord, processAnswer } from '../lib/sm2.js';
+import { get, set, STORAGE_KEYS } from '../lib/storage.js';
+
+function createWordsStore() {
+  const { subscribe, update } = writable({
+    words: rawWords,
+    mastery: {}  // { word: { stage, ease, interval, repetitions, nextReview, history } }
+  });
+
+  let loaded = false;
+
+  function ensureLoaded() {
+    if (loaded) return;
+    update(state => {
+      const saved = get(STORAGE_KEYS.WORD_MASTERY) || {};
+      const mastery = {};
+      for (const w of rawWords) {
+        mastery[w.word] = saved[w.word] || createMasteryRecord();
+      }
+      loaded = true;
+      return { words: rawWords, mastery };
+    });
+  }
+
+  return {
+    subscribe,
+    load() { ensureLoaded(); },
+    save() {
+      update(state => {
+        set(STORAGE_KEYS.WORD_MASTERY, state.mastery);
+        return state;
+      });
+    },
+    getDueWords() {
+      ensureLoaded();
+      let state;
+      const unsub = subscribe(s => { state = s; }); unsub();
+      const today = new Date().toISOString().split('T')[0];
+      return state.words.filter(w =>
+        state.mastery[w.word].nextReview <= today
+      );
+    },
+    recordResult(word, correct) {
+      update(state => {
+        const mastery = {
+          ...state.mastery,
+          [word]: processAnswer(state.mastery[word], correct)
+        };
+        set(STORAGE_KEYS.WORD_MASTERY, mastery);
+        return { ...state, mastery };
+      });
+    },
+    getStats() {
+      ensureLoaded();
+      let state;
+      const unsub = subscribe(s => { state = s; }); unsub();
+      const stages = { 0: 0, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
+      for (const w of state.words) {
+        stages[state.mastery[w.word].stage] = (stages[state.mastery[w.word].stage] || 0) + 1;
+      }
+      return { total: state.words.length, stages };
+    },
+    getByWord(word) {
+      ensureLoaded();
+      let state;
+      const unsub = subscribe(s => { state = s; }); unsub();
+      return state.words.find(w => w.word === word) || null;
+    },
+    getAllWords() {
+      ensureLoaded();
+      let state;
+      const unsub = subscribe(s => { state = s; }); unsub();
+      return state.words.map(w => ({
+        ...w,
+        mastery: state.mastery[w.word]
+      }));
+    }
+  };
+}
+
+export const wordsStore = createWordsStore();

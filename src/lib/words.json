@@ -1,0 +1,802 @@
+[
+  {
+    "word": "abandon",
+    "phonetic": "/əˈbændən/",
+    "meaning": "v. 放弃，抛弃",
+    "example": "They had to abandon the game due to rain.",
+    "translation": "因为下雨，他们不得不放弃比赛。",
+    "difficulty": 2
+  },
+  {
+    "word": "benefit",
+    "phonetic": "/ˈbenɪfɪt/",
+    "meaning": "n./v. 利益，好处；受益",
+    "example": "Regular exercise brings many health benefits.",
+    "translation": "经常锻炼带来许多健康益处。",
+    "difficulty": 2
+  },
+  {
+    "word": "challenge",
+    "phonetic": "/ˈtʃælɪndʒ/",
+    "meaning": "n./v. 挑战",
+    "example": "Learning a new language is a big challenge.",
+    "translation": "学习一门新语言是一个巨大的挑战。",
+    "difficulty": 2
+  },
+  {
+    "word": "diverse",
+    "phonetic": "/daɪˈvɜːrs/",
+    "meaning": "adj. 不同的，多样化的",
+    "example": "The city has a diverse population.",
+    "translation": "这个城市有多元化的人口。",
+    "difficulty": 3
+  },
+  {
+    "word": "essential",
+    "phonetic": "/ɪˈsenʃl/",
+    "meaning": "adj. 必要的，本质的",
+    "example": "Water is essential for life.",
+    "translation": "水对生命是必不可少的。",
+    "difficulty": 2
+  },
+  {
+    "word": "knowledge",
+    "phonetic": "/ˈnɒlɪdʒ/",
+    "meaning": "n. 知识，学问",
+    "example": "Knowledge is power.",
+    "translation": "知识就是力量。",
+    "difficulty": 1
+  },
+  {
+    "word": "literature",
+    "phonetic": "/ˈlɪtrətʃər/",
+    "meaning": "n. 文学，文学作品",
+    "example": "She majored in English literature at university.",
+    "translation": "她在大学主修英国文学。",
+    "difficulty": 3
+  },
+  {
+    "word": "mystery",
+    "phonetic": "/ˈmɪstəri/",
+    "meaning": "n. 神秘，谜",
+    "example": "The disappearance remains a mystery.",
+    "translation": "这起失踪事件仍然是个谜。",
+    "difficulty": 2
+  },
+  {
+    "word": "obstacle",
+    "phonetic": "/ˈɒbstəkl/",
+    "meaning": "n. 障碍，阻碍",
+    "example": "Lack of money is the main obstacle.",
+    "translation": "缺钱是主要的障碍。",
+    "difficulty": 3
+  },
+  {
+    "word": "ambiguous",
+    "phonetic": "/æmˈbɪɡjuəs/",
+    "meaning": "adj. 模棱两可的，含糊的",
+    "example": "The instructions were ambiguous and difficult to follow.",
+    "translation": "说明含糊不清，很难照着做。",
+    "difficulty": 5
+  },
+  {
+    "word": "recommend",
+    "phonetic": "/ˌrekəˈmend/",
+    "meaning": "v. 推荐，建议",
+    "example": "I highly recommend this book to all students.",
+    "translation": "我向所有学生强烈推荐这本书。",
+    "difficulty": 2
+  },
+  {
+    "word": "significant",
+    "phonetic": "/sɪɡˈnɪfɪkənt/",
+    "meaning": "adj. 重要的，有意义的",
+    "example": "There has been a significant improvement in her grades.",
+    "translation": "她的成绩有了显著的提高。",
+    "difficulty": 3
+  },
+  {
+    "word": "technology",
+    "phonetic": "/tekˈnɒlədʒi/",
+    "meaning": "n. 技术，科技",
+    "example": "Modern technology has changed our lives.",
+    "translation": "现代技术改变了我们的生活。",
+    "difficulty": 1
+  },
+  {
+    "word": "unique",
+    "phonetic": "/juˈniːk/",
+    "meaning": "adj. 独特的，唯一的",
+    "example": "Each person has a unique fingerprint.",
+    "translation": "每个人都有独特的指纹。",
+    "difficulty": 2
+  },
+  {
+    "word": "volunteer",
+    "phonetic": "/ˌvɒlənˈtɪər/",
+    "meaning": "n./v. 志愿者；自愿做",
+    "example": "Many people volunteer at the local hospital.",
+    "translation": "许多人在当地医院做志愿者。",
+    "difficulty": 2
+  },
+  {
+    "word": "demonstrate",
+    "phonetic": "/ˈdemənstreɪt/",
+    "meaning": "v. 证明，示范；游行示威",
+    "example": "The experiment demonstrates the theory.",
+    "translation": "这个实验证明了该理论。",
+    "difficulty": 3
+  },
+  {
+    "word": "environment",
+    "phonetic": "/ɪnˈvaɪrənmənt/",
+    "meaning": "n. 环境",
+    "example": "We should protect the environment.",
+    "translation": "我们应该保护环境。",
+    "difficulty": 2
+  },
+  {
+    "word": "harmony",
+    "phonetic": "/ˈhɑːrməni/",
+    "meaning": "n. 和谐，融洽",
+    "example": "We must live in harmony with nature.",
+    "translation": "我们必须与自然和谐相处。",
+    "difficulty": 3
+  },
+  {
+    "word": "involve",
+    "phonetic": "/ɪnˈvɒlv/",
+    "meaning": "v. 包含，涉及；参与",
+    "example": "The project involves a lot of teamwork.",
+    "translation": "这个项目需要大量的团队合作。",
+    "difficulty": 2
+  },
+  {
+    "word": "maintain",
+    "phonetic": "/meɪnˈteɪn/",
+    "meaning": "v. 维持，保持；保养",
+    "example": "It's important to maintain good health.",
+    "translation": "保持身体健康很重要。",
+    "difficulty": 2
+  },
+  {
+    "word": "opportunity",
+    "phonetic": "/ˌɒpəˈtjuːnəti/",
+    "meaning": "n. 机会，机遇",
+    "example": "This is a great opportunity to learn.",
+    "translation": "这是一个学习的好机会。",
+    "difficulty": 2
+  },
+  {
+    "word": "participate",
+    "phonetic": "/pɑːrˈtɪsɪpeɪt/",
+    "meaning": "v. 参加，参与",
+    "example": "Everyone is encouraged to participate in the discussion.",
+    "translation": "鼓励每个人参与讨论。",
+    "difficulty": 2
+  },
+  {
+    "word": "potential",
+    "phonetic": "/pəˈtenʃl/",
+    "meaning": "adj./n. 潜在的；潜力",
+    "example": "Every student has great potential.",
+    "translation": "每个学生都有巨大的潜力。",
+    "difficulty": 3
+  },
+  {
+    "word": "recognize",
+    "phonetic": "/ˈrekəɡnaɪz/",
+    "meaning": "v. 认出，承认；认识到",
+    "example": "I recognize him from the photo.",
+    "translation": "我从照片上认出了他。",
+    "difficulty": 2
+  },
+  {
+    "word": "responsible",
+    "phonetic": "/rɪˈspɒnsəbl/",
+    "meaning": "adj. 负责的，有责任心的",
+    "example": "She is responsible for the whole project.",
+    "translation": "她负责整个项目。",
+    "difficulty": 2
+  },
+  {
+    "word": "schedule",
+    "phonetic": "/ˈʃedjuːl/",
+    "meaning": "n./v. 时间表；安排",
+    "example": "The flight is scheduled to depart at 6 p.m.",
+    "translation": "航班定于下午6点起飞。",
+    "difficulty": 2
+  },
+  {
+    "word": "temporary",
+    "phonetic": "/ˈtemprəri/",
+    "meaning": "adj. 暂时的，临时的",
+    "example": "This is only a temporary solution.",
+    "translation": "这只是暂时的解决方案。",
+    "difficulty": 3
+  },
+  {
+    "word": "adapt",
+    "phonetic": "/əˈdæpt/",
+    "meaning": "v. 适应，改编",
+    "example": "Animals must adapt to their environment.",
+    "translation": "动物必须适应它们的环境。",
+    "difficulty": 3
+  },
+  {
+    "word": "approach",
+    "phonetic": "/əˈproʊtʃ/",
+    "meaning": "v./n. 接近；方法，途径",
+    "example": "We need a new approach to this problem.",
+    "translation": "我们需要一种新方法来解决这个问题。",
+    "difficulty": 2
+  },
+  {
+    "word": "attitude",
+    "phonetic": "/ˈætɪtjuːd/",
+    "meaning": "n. 态度，看法",
+    "example": "A positive attitude is key to success.",
+    "translation": "积极的态度是成功的关键。",
+    "difficulty": 2
+  },
+  {
+    "word": "aware",
+    "phonetic": "/əˈweər/",
+    "meaning": "adj. 意识到的，知道的",
+    "example": "Are you aware of the risks involved?",
+    "translation": "你意识到其中的风险了吗？",
+    "difficulty": 2
+  },
+  {
+    "word": "concentrate",
+    "phonetic": "/ˈkɒnsntreɪt/",
+    "meaning": "v. 集中注意力；浓缩",
+    "example": "I need to concentrate on my studies.",
+    "translation": "我需要集中精力学习。",
+    "difficulty": 2
+  },
+  {
+    "word": "curious",
+    "phonetic": "/ˈkjʊriəs/",
+    "meaning": "adj. 好奇的，求知欲强的",
+    "example": "Children are naturally curious about everything.",
+    "translation": "孩子们天生对一切充满好奇。",
+    "difficulty": 2
+  },
+  {
+    "word": "deliver",
+    "phonetic": "/dɪˈlɪvər/",
+    "meaning": "v. 递送，发表；分娩",
+    "example": "The postman delivers mail every morning.",
+    "translation": "邮递员每天早上投递邮件。",
+    "difficulty": 2
+  },
+  {
+    "word": "determine",
+    "phonetic": "/dɪˈtɜːrmɪn/",
+    "meaning": "v. 决定，确定",
+    "example": "Your attitude determines your success.",
+    "translation": "你的态度决定你的成功。",
+    "difficulty": 2
+  },
+  {
+    "word": "economy",
+    "phonetic": "/ɪˈkɒnəmi/",
+    "meaning": "n. 经济，节约",
+    "example": "The country's economy is developing fast.",
+    "translation": "这个国家的经济发展很快。",
+    "difficulty": 2
+  },
+  {
+    "word": "evidence",
+    "phonetic": "/ˈevɪdəns/",
+    "meaning": "n. 证据，迹象",
+    "example": "There is no evidence of his guilt.",
+    "translation": "没有证据证明他有罪。",
+    "difficulty": 2
+  },
+  {
+    "word": "explore",
+    "phonetic": "/ɪkˈsplɔːr/",
+    "meaning": "v. 探索，探险；探讨",
+    "example": "We should explore all possible solutions.",
+    "translation": "我们应该探讨所有可能的解决方案。",
+    "difficulty": 2
+  },
+  {
+    "word": "fortune",
+    "phonetic": "/ˈfɔːrtʃən/",
+    "meaning": "n. 财富，运气",
+    "example": "He made a fortune in the stock market.",
+    "translation": "他在股市赚了一大笔钱。",
+    "difficulty": 2
+  },
+  {
+    "word": "ignore",
+    "phonetic": "/ɪɡˈnɔːr/",
+    "meaning": "v. 忽视，不理睬",
+    "example": "Don't ignore the warning signs.",
+    "translation": "不要忽视警告信号。",
+    "difficulty": 2
+  },
+  {
+    "word": "impact",
+    "phonetic": "/ˈɪmpækt/",
+    "meaning": "n./v. 影响，冲击",
+    "example": "The new policy has a significant impact on education.",
+    "translation": "新政策对教育有重大影响。",
+    "difficulty": 2
+  },
+  {
+    "word": "influence",
+    "phonetic": "/ˈɪnfluəns/",
+    "meaning": "n./v. 影响，作用",
+    "example": "Parents have a great influence on their children.",
+    "translation": "父母对孩子有很大的影响。",
+    "difficulty": 2
+  },
+  {
+    "word": "obvious",
+    "phonetic": "/ˈɒbviəs/",
+    "meaning": "adj. 明显的，显而易见的",
+    "example": "It's obvious that he is lying.",
+    "translation": "很明显他在撒谎。",
+    "difficulty": 2
+  },
+  {
+    "word": "organize",
+    "phonetic": "/ˈɔːrɡənaɪz/",
+    "meaning": "v. 组织，安排",
+    "example": "Let's organize a class meeting.",
+    "translation": "我们来组织一次班会。",
+    "difficulty": 2
+  },
+  {
+    "word": "perform",
+    "phonetic": "/pərˈfɔːrm/",
+    "meaning": "v. 表演，执行；表现",
+    "example": "The team performed well in the competition.",
+    "translation": "团队在比赛中表现出色。",
+    "difficulty": 2
+  },
+  {
+    "word": "precious",
+    "phonetic": "/ˈpreʃəs/",
+    "meaning": "adj. 珍贵的，宝贵的",
+    "example": "Time is precious and should not be wasted.",
+    "translation": "时间是宝贵的，不应该浪费。",
+    "difficulty": 2
+  },
+  {
+    "word": "promote",
+    "phonetic": "/prəˈmoʊt/",
+    "meaning": "v. 促进，推广；晋升",
+    "example": "Exercise promotes good health.",
+    "translation": "锻炼促进健康。",
+    "difficulty": 2
+  },
+  {
+    "word": "reject",
+    "phonetic": "/rɪˈdʒekt/",
+    "meaning": "v. 拒绝，否决",
+    "example": "She rejected his offer of help.",
+    "translation": "她拒绝了他的帮助。",
+    "difficulty": 2
+  },
+  {
+    "word": "release",
+    "phonetic": "/rɪˈliːs/",
+    "meaning": "v./n. 释放，发布；发行",
+    "example": "The new movie will be released next month.",
+    "translation": "这部新电影将于下个月上映。",
+    "difficulty": 2
+  },
+  {
+    "word": "resource",
+    "phonetic": "/rɪˈzɔːrs/",
+    "meaning": "n. 资源",
+    "example": "We must use natural resources wisely.",
+    "translation": "我们必须明智地利用自然资源。",
+    "difficulty": 2
+  },
+  {
+    "word": "respond",
+    "phonetic": "/rɪˈspɒnd/",
+    "meaning": "v. 回应，回复；作出反应",
+    "example": "Please respond to my email as soon as possible.",
+    "translation": "请尽快回复我的邮件。",
+    "difficulty": 2
+  },
+  {
+    "word": "source",
+    "phonetic": "/sɔːrs/",
+    "meaning": "n. 来源，出处",
+    "example": "The sun is the main source of energy.",
+    "translation": "太阳是能量的主要来源。",
+    "difficulty": 2
+  },
+  {
+    "word": "suitable",
+    "phonetic": "/ˈsuːtəbl/",
+    "meaning": "adj. 合适的，适当的",
+    "example": "This book is suitable for beginners.",
+    "translation": "这本书适合初学者。",
+    "difficulty": 2
+  },
+  {
+    "word": "survive",
+    "phonetic": "/sərˈvaɪv/",
+    "meaning": "v. 幸存，生存；挺过",
+    "example": "Only a few people survived the earthquake.",
+    "translation": "只有少数人在地震中幸存下来。",
+    "difficulty": 2
+  },
+  {
+    "word": "symbol",
+    "phonetic": "/ˈsɪmbl/",
+    "meaning": "n. 象征，符号",
+    "example": "The dove is a symbol of peace.",
+    "translation": "鸽子是和平的象征。",
+    "difficulty": 2
+  },
+  {
+    "word": "tradition",
+    "phonetic": "/trəˈdɪʃn/",
+    "meaning": "n. 传统，惯例",
+    "example": "It is a tradition to eat dumplings during Spring Festival.",
+    "translation": "春节吃饺子是一个传统。",
+    "difficulty": 2
+  },
+  {
+    "word": "variety",
+    "phonetic": "/vəˈraɪəti/",
+    "meaning": "n. 多样性，种类",
+    "example": "The store sells a variety of goods.",
+    "translation": "这家商店出售各种各样的商品。",
+    "difficulty": 2
+  },
+  {
+    "word": "visible",
+    "phonetic": "/ˈvɪzəbl/",
+    "meaning": "adj. 可见的，明显的",
+    "example": "The stars are visible at night.",
+    "translation": "星星在夜晚可见。",
+    "difficulty": 2
+  },
+  {
+    "word": "wisdom",
+    "phonetic": "/ˈwɪzdəm/",
+    "meaning": "n. 智慧，明智",
+    "example": "With age comes wisdom.",
+    "translation": "智慧随年龄增长。",
+    "difficulty": 2
+  },
+  {
+    "word": "identity",
+    "phonetic": "/aɪˈdentəti/",
+    "meaning": "n. 身份；特性",
+    "example": "He kept his identity a secret.",
+    "translation": "他对自己的身份保密。",
+    "difficulty": 3
+  },
+  {
+    "word": "indicate",
+    "phonetic": "/ˈɪndɪkeɪt/",
+    "meaning": "v. 表明，指示",
+    "example": "The results indicate that the treatment works.",
+    "translation": "结果表明这种治疗有效。",
+    "difficulty": 3
+  },
+  {
+    "word": "individual",
+    "phonetic": "/ˌɪndɪˈvɪdʒuəl/",
+    "meaning": "adj./n. 个人的；个人",
+    "example": "Each individual has their own strengths.",
+    "translation": "每个人都有自己的长处。",
+    "difficulty": 3
+  },
+  {
+    "word": "intelligent",
+    "phonetic": "/ɪnˈtelɪdʒənt/",
+    "meaning": "adj. 聪明的，有智力的",
+    "example": "Dolphins are highly intelligent animals.",
+    "translation": "海豚是非常聪明的动物。",
+    "difficulty": 3
+  },
+  {
+    "word": "investigate",
+    "phonetic": "/ɪnˈvestɪɡeɪt/",
+    "meaning": "v. 调查，研究",
+    "example": "The police are investigating the crime.",
+    "translation": "警方正在调查这起犯罪。",
+    "difficulty": 3
+  },
+  {
+    "word": "manufacture",
+    "phonetic": "/ˌmænjuˈfæktʃər/",
+    "meaning": "v./n. 制造，生产",
+    "example": "This factory manufactures car parts.",
+    "translation": "这家工厂生产汽车零件。",
+    "difficulty": 3
+  },
+  {
+    "word": "occupation",
+    "phonetic": "/ˌɒkjuˈpeɪʃn/",
+    "meaning": "n. 职业；占领；居住",
+    "example": "Please state your name and occupation.",
+    "translation": "请说明你的姓名和职业。",
+    "difficulty": 3
+  },
+  {
+    "word": "oppose",
+    "phonetic": "/əˈpoʊz/",
+    "meaning": "v. 反对，对抗",
+    "example": "Many people oppose the new law.",
+    "translation": "许多人反对这项新法律。",
+    "difficulty": 3
+  },
+  {
+    "word": "possess",
+    "phonetic": "/pəˈzes/",
+    "meaning": "v. 拥有，具有",
+    "example": "She possesses great leadership skills.",
+    "translation": "她拥有出色的领导才能。",
+    "difficulty": 3
+  },
+  {
+    "word": "predict",
+    "phonetic": "/prɪˈdɪkt/",
+    "meaning": "v. 预测，预言",
+    "example": "It is difficult to predict the future.",
+    "translation": "预测未来是困难的。",
+    "difficulty": 3
+  },
+  {
+    "word": "preserve",
+    "phonetic": "/prɪˈzɜːrv/",
+    "meaning": "v. 保护，保存；保鲜",
+    "example": "We must preserve the natural environment.",
+    "translation": "我们必须保护自然环境。",
+    "difficulty": 3
+  },
+  {
+    "word": "principle",
+    "phonetic": "/ˈprɪnsəpl/",
+    "meaning": "n. 原则，原理；准则",
+    "example": "Honesty is an important principle.",
+    "translation": "诚实是一个重要的原则。",
+    "difficulty": 3
+  },
+  {
+    "word": "protest",
+    "phonetic": "/ˈproʊtest/",
+    "meaning": "n./v. 抗议，反对",
+    "example": "Students protested against the decision.",
+    "translation": "学生们抗议这个决定。",
+    "difficulty": 3
+  },
+  {
+    "word": "purchase",
+    "phonetic": "/ˈpɜːrtʃəs/",
+    "meaning": "v./n. 购买",
+    "example": "You can purchase tickets online.",
+    "translation": "你可以在网上购票。",
+    "difficulty": 3
+  },
+  {
+    "word": "reflect",
+    "phonetic": "/rɪˈflekt/",
+    "meaning": "v. 反映，反射；思考",
+    "example": "The story reflects traditional values.",
+    "translation": "这个故事反映了传统价值观。",
+    "difficulty": 3
+  },
+  {
+    "word": "reform",
+    "phonetic": "/rɪˈfɔːrm/",
+    "meaning": "n./v. 改革，革新",
+    "example": "The education system needs reform.",
+    "translation": "教育体系需要改革。",
+    "difficulty": 3
+  },
+  {
+    "word": "reputation",
+    "phonetic": "/ˌrepjuˈteɪʃn/",
+    "meaning": "n. 名声，名誉",
+    "example": "The school has an excellent reputation.",
+    "translation": "这所学校有极好的声誉。",
+    "difficulty": 3
+  },
+  {
+    "word": "sacrifice",
+    "phonetic": "/ˈsækrɪfaɪs/",
+    "meaning": "n./v. 牺牲，献祭",
+    "example": "Parents often sacrifice for their children.",
+    "translation": "父母常常为孩子做出牺牲。",
+    "difficulty": 3
+  },
+  {
+    "word": "sensitive",
+    "phonetic": "/ˈsensətɪv/",
+    "meaning": "adj. 敏感的，灵敏的；体贴的",
+    "example": "She is very sensitive to criticism.",
+    "translation": "她对批评很敏感。",
+    "difficulty": 3
+  },
+  {
+    "word": "strategy",
+    "phonetic": "/ˈstrætədʒi/",
+    "meaning": "n. 策略，战略",
+    "example": "We need a good strategy to win the game.",
+    "translation": "我们需要一个好的策略来赢得比赛。",
+    "difficulty": 3
+  },
+  {
+    "word": "substance",
+    "phonetic": "/ˈsʌbstəns/",
+    "meaning": "n. 物质；实质；内容",
+    "example": "Water is a substance essential for life.",
+    "translation": "水是生命必需的物质。",
+    "difficulty": 3
+  },
+  {
+    "word": "sufficient",
+    "phonetic": "/səˈfɪʃnt/",
+    "meaning": "adj. 足够的，充分的",
+    "example": "We have sufficient evidence to prove the case.",
+    "translation": "我们有足够的证据来证明这个案子。",
+    "difficulty": 3
+  },
+  {
+    "word": "summarize",
+    "phonetic": "/ˈsʌməraɪz/",
+    "meaning": "v. 总结，概括",
+    "example": "Please summarize the main points of the article.",
+    "translation": "请总结文章的主要观点。",
+    "difficulty": 3
+  },
+  {
+    "word": "thorough",
+    "phonetic": "/ˈθʌrə/",
+    "meaning": "adj. 彻底的，全面的",
+    "example": "The doctor gave me a thorough examination.",
+    "translation": "医生给我做了全面的检查。",
+    "difficulty": 3
+  },
+  {
+    "word": "transform",
+    "phonetic": "/trænsˈfɔːrm/",
+    "meaning": "v. 改变，转变；改造",
+    "example": "Education can transform a person's life.",
+    "translation": "教育可以改变一个人的生活。",
+    "difficulty": 3
+  },
+  {
+    "word": "universal",
+    "phonetic": "/ˌjuːnɪˈvɜːrsl/",
+    "meaning": "adj. 普遍的，全世界的；通用的",
+    "example": "Music is a universal language.",
+    "translation": "音乐是一种通用的语言。",
+    "difficulty": 3
+  },
+  {
+    "word": "urge",
+    "phonetic": "/ɜːrdʒ/",
+    "meaning": "v./n. 催促，力劝；强烈的欲望",
+    "example": "I urge you to consider this opportunity carefully.",
+    "translation": "我力劝你仔细考虑这个机会。",
+    "difficulty": 3
+  },
+  {
+    "word": "victim",
+    "phonetic": "/ˈvɪktɪm/",
+    "meaning": "n. 受害者，牺牲品",
+    "example": "The victims of the flood received aid.",
+    "translation": "洪水灾民得到了援助。",
+    "difficulty": 3
+  },
+  {
+    "word": "widespread",
+    "phonetic": "/ˈwaɪdspred/",
+    "meaning": "adj. 广泛的，普遍的",
+    "example": "The use of smartphones is widespread.",
+    "translation": "智能手机的使用很普遍。",
+    "difficulty": 3
+  },
+  {
+    "word": "phenomenon",
+    "phonetic": "/fɪˈnɒmɪnən/",
+    "meaning": "n. 现象",
+    "example": "Global warming is a natural phenomenon.",
+    "translation": "全球变暖是一种自然现象。",
+    "difficulty": 4
+  },
+  {
+    "word": "distinguish",
+    "phonetic": "/dɪˈstɪŋɡwɪʃ/",
+    "meaning": "v. 区分，辨别",
+    "example": "It is hard to distinguish the two twins.",
+    "translation": "很难区分这对双胞胎。",
+    "difficulty": 4
+  },
+  {
+    "word": "emerge",
+    "phonetic": "/ɪˈmɜːrdʒ/",
+    "meaning": "v. 出现，浮现",
+    "example": "New evidence has emerged in the case.",
+    "translation": "案件中出现了新证据。",
+    "difficulty": 4
+  },
+  {
+    "word": "extraordinary",
+    "phonetic": "/ɪkˈstrɔːrdɪneri/",
+    "meaning": "adj. 非凡的，卓越的",
+    "example": "She has an extraordinary talent for music.",
+    "translation": "她在音乐方面有非凡的天赋。",
+    "difficulty": 4
+  },
+  {
+    "word": "flexible",
+    "phonetic": "/ˈfleksəbl/",
+    "meaning": "adj. 灵活的，有弹性的",
+    "example": "We need a flexible approach to solve this problem.",
+    "translation": "我们需要灵活的方法来解决这个问题。",
+    "difficulty": 4
+  },
+  {
+    "word": "gradual",
+    "phonetic": "/ˈɡrædʒuəl/",
+    "meaning": "adj. 逐渐的，渐进的",
+    "example": "There has been a gradual improvement in her health.",
+    "translation": "她的健康状况逐渐好转。",
+    "difficulty": 4
+  },
+  {
+    "word": "interpret",
+    "phonetic": "/ɪnˈtɜːrprɪt/",
+    "meaning": "v. 解释，口译；理解",
+    "example": "How do you interpret this poem?",
+    "translation": "你如何理解这首诗？",
+    "difficulty": 4
+  },
+  {
+    "word": "isolate",
+    "phonetic": "/ˈaɪsəleɪt/",
+    "meaning": "v. 隔离，孤立",
+    "example": "The patient was isolated to prevent infection.",
+    "translation": "病人被隔离以防感染。",
+    "difficulty": 4
+  },
+  {
+    "word": "reluctant",
+    "phonetic": "/rɪˈlʌktənt/",
+    "meaning": "adj. 不情愿的，勉强的",
+    "example": "He was reluctant to admit his mistake.",
+    "translation": "他不情愿承认自己的错误。",
+    "difficulty": 4
+  },
+  {
+    "word": "scatter",
+    "phonetic": "/ˈskætər/",
+    "meaning": "v. 分散，散开；撒",
+    "example": "The students scattered when the bell rang.",
+    "translation": "铃响时学生们散开了。",
+    "difficulty": 4
+  },
+  {
+    "word": "tolerate",
+    "phonetic": "/ˈtɒləreɪt/",
+    "meaning": "v. 容忍，忍受",
+    "example": "I cannot tolerate such rude behavior.",
+    "translation": "我不能容忍如此粗鲁的行为。",
+    "difficulty": 4
+  },
+  {
+    "word": "welfare",
+    "phonetic": "/ˈwelfeər/",
+    "meaning": "n. 福利，幸福",
+    "example": "The government provides welfare for the poor.",
+    "translation": "政府为穷人提供福利。",
+    "difficulty": 4
+  }
+]
