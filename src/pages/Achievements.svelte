@@ -1,5 +1,5 @@
 <script>
-  import { onMount } from 'svelte';
+  import { onMount, onDestroy } from 'svelte';
   import { userStore } from '../stores/user.js';
   import XPBar from '../components/XPBar.svelte';
   import BadgeGrid from '../components/BadgeGrid.svelte';
@@ -7,10 +7,16 @@
   let userState = $state({ xp: 0, level: 1, streak: 0, lastStudyDate: null, dailyGoal: 20, totalWordsLearned: 0, unlockedBadges: [] });
   let levelInfo = $state({ level: 1, currentXp: 0, requiredXp: 100, progress: 0 });
 
+  let unsubUser;
+
   onMount(() => {
     userStore.load();
-    userStore.subscribe(v => { userState = v; });
+    unsubUser = userStore.subscribe(v => { userState = v; });
     levelInfo = userStore.getLevelProgress();
+  });
+
+  onDestroy(() => {
+    if (unsubUser) unsubUser();
   });
 
   function handleBadgeClick(badge) {
