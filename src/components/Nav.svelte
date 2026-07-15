@@ -1,6 +1,21 @@
 <script>
-  import { router } from 'svelte-spa-router';
-  let activeRoute = $derived(router.location);
+  import { onMount, onDestroy } from 'svelte';
+
+  let activeRoute = $state('/');
+
+  function updateRoute() {
+    const hash = window.location.hash;
+    activeRoute = hash.startsWith('#/') ? hash.slice(1) : '/';
+  }
+
+  onMount(() => {
+    updateRoute();
+    window.addEventListener('hashchange', updateRoute);
+  });
+
+  onDestroy(() => {
+    window.removeEventListener('hashchange', updateRoute);
+  });
 
   const items = [
     { path: '/', label: '首页', labelEn: 'Home', icon: 'home' },

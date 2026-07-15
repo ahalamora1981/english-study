@@ -12,43 +12,31 @@
   import { on } from './lib/notifications.js';
   import './styles/animations.css';
 
-  // Simple hash-based routing
   const routes = {
-    '/': Home,
-    '/study': Study,
-    '/dictionary': Dictionary,
-    '/achievements': Achievements,
+    '/': Home, '/study': Study,
+    '/dictionary': Dictionary, '/achievements': Achievements,
   };
 
   let currentRoute = $state('/');
-
-  function getHashRoute() {
-    const hash = window.location.hash;
-    if (hash.startsWith('#/')) return hash.slice(1);
-    return '/';
-  }
-
-  function navigate(path) {
-    window.location.hash = '#' + path;
-  }
-
-  function onHashChange() {
-    currentRoute = getHashRoute();
-  }
-
   let showWelcome = $state(false);
   let toast = $state({ message: '', type: 'info' });
+  let unsubs = [];
+
+  function updateRoute() {
+    const hash = window.location.hash;
+    currentRoute = hash.startsWith('#/') ? hash.slice(1) : '/';
+  }
+
+  let Page = $derived(routes[currentRoute] || Home);
 
   onMount(() => {
     userStore.load();
     wordsStore.load();
     settingsStore.load();
 
-    // Set initial route from hash
-    currentRoute = getHashRoute();
-    window.addEventListener('hashchange', onHashChange);
+    updateRoute();
+    window.addEventListener('hashchange', updateRoute);
 
-    // First-visit welcome check
     const unsub = userStore.subscribe(state => {
       if (state.xp === 0 && state.totalWordsLearned === 0) {
         showWelcome = true;
@@ -56,29 +44,23 @@
       unsub();
     });
 
-    // Listen for storage errors
     unsubs.push(on('storage:error', (data) => {
       toast = { message: data.message, type: 'error' };
     }));
   });
 
-  let unsubs = [];
   onDestroy(() => {
-    for (const fn of unsubs) fn();
-    window.removeEventListener('hashchange', onHashChange);
+    window.removeEventListener('hashchange', updateRoute);
   });
 
   function handleWelcomeClose() {
     showWelcome = false;
-    navigate('/study');
+    window.location.hash = '#/study';
   }
 
   function handleToastClose() {
     toast = { message: '', type: 'info' };
   }
-
-  // Resolve current page component
-  let Page = $derived(routes[currentRoute] || Home);
 </script>
 
 <div class="app-shell">
