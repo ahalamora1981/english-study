@@ -43,14 +43,18 @@ function createWordsStore() {
       );
     },
     recordResult(word, correct) {
+      ensureLoaded();
       update(state => {
         const mastery = {
           ...state.mastery,
           [word]: processAnswer(state.mastery[word], correct)
         };
-        set(STORAGE_KEYS.WORD_MASTERY, mastery);
         return { ...state, mastery };
       });
+      // persist outside update callback
+      let currentMastery;
+      const unsub = subscribe(s => { currentMastery = s.mastery; }); unsub();
+      set(STORAGE_KEYS.WORD_MASTERY, currentMastery);
     },
     getStats() {
       ensureLoaded();
