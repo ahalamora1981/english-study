@@ -1,10 +1,14 @@
 <script>
+  import { onMount } from 'svelte';
   import Router from 'svelte-spa-router';
   import Nav from './components/Nav.svelte';
   import Home from './pages/Home.svelte';
   import Study from './pages/Study.svelte';
   import Dictionary from './pages/Dictionary.svelte';
   import Achievements from './pages/Achievements.svelte';
+  import { userStore } from './stores/user.js';
+  import { wordsStore } from './stores/words.js';
+  import { settingsStore } from './stores/settings.js';
 
   const routes = {
     '/': Home,
@@ -12,6 +16,12 @@
     '/dictionary': Dictionary,
     '/achievements': Achievements,
   };
+
+  onMount(() => {
+    userStore.load();
+    wordsStore.load();
+    settingsStore.load();
+  });
 </script>
 
 <div class="app-shell">
