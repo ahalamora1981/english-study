@@ -1,4 +1,6 @@
+import { emit } from './notifications.js';
 export const STORAGE_KEYS = {
+
   USER: 'english_study_user',
   WORD_MASTERY: 'english_study_word_mastery',
   DAILY_PROGRESS: 'english_study_daily',
@@ -30,6 +32,7 @@ export function set(key, value) {
   } catch (e) {
     if (e instanceof DOMException && e.name === 'QuotaExceededError') {
       console.warn('localStorage quota exceeded');
+      emit('storage:error', { message: '存储空间不足，请清理浏览器数据 | Storage full, please clear browser data' });
     }
     return false;
   }

@@ -75,6 +75,14 @@ function createUserStore() {
         return state;
       });
     },
+    setAllMastered() {
+      update(state => {
+        if (state.allMastered) return state;
+        const result = { ...state, allMastered: true };
+        set(STORAGE_KEYS.USER, result);
+        return result;
+      });
+    },
     resetStreak() {
       update(state => {
         const result = { ...state, streak: 0 };

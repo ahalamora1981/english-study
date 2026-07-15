@@ -1,6 +1,4 @@
 <script>
-  import { link } from 'svelte-spa-router';
-
   const items = [
     { path: '/', label: '首页', labelEn: 'Home', icon: 'home' },
     { path: '/study', label: '学习', labelEn: 'Study', icon: 'study' },
@@ -19,7 +17,7 @@
 <nav class="nav">
   <div class="nav-inner">
     {#each items as item}
-      <a href={item.path} use:link class="nav-item" activeClass="active">
+      <a href="#{item.path}" class="nav-item" class:active={activeRoute === item.path}>
         <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <path d={icons[item.icon]} />
         </svg>

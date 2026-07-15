@@ -1,6 +1,5 @@
 <script>
   import { onMount } from 'svelte';
-  import { link } from 'svelte-spa-router';
   import { userStore } from '../stores/user.js';
   import { wordsStore } from '../stores/words.js';
   import StreakWidget from '../components/StreakWidget.svelte';
@@ -32,7 +31,7 @@
   <DailyGoalRing current={todayStudied} goal={userState.dailyGoal} />
   <WordCountSummary totalWords={stats.total} stages={stats.stages} />
 
-  <a href="/study" use:link class="start-button">
+  <a href="#/study" class="start-button">
     开始学习 | Start Study
   </a>
 </div>

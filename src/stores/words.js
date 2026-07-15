@@ -2,6 +2,7 @@ import { writable } from 'svelte/store';
 import rawWords from '../lib/words.json';
 import { createMasteryRecord, processAnswer } from '../lib/sm2.js';
 import { get, set, STORAGE_KEYS } from '../lib/storage.js';
+import { userStore } from './user.js';
 
 function createWordsStore() {
   const { subscribe, update } = writable({
@@ -64,7 +65,12 @@ function createWordsStore() {
       for (const w of state.words) {
         stages[state.mastery[w.word].stage] = (stages[state.mastery[w.word].stage] || 0) + 1;
       }
-      return { total: state.words.length, stages };
+      // Check if all words are mastered (stage 5) — trigger grand slam badge
+      const total = state.words.length;
+      if (total > 0 && stages[5] === total) {
+        userStore.setAllMastered();
+      }
+      return { total, stages };
     },
     getByWord(word) {
       ensureLoaded();
