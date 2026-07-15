@@ -5,14 +5,22 @@
   import BadgeGrid from '../components/BadgeGrid.svelte';
 
   let userState = $state({ xp: 0, level: 1, streak: 0, lastStudyDate: null, dailyGoal: 20, totalWordsLearned: 0, unlockedBadges: [] });
-  let levelInfo = $state({ level: 1, currentXp: 0, requiredXp: 100, progress: 0 });
+  let levelInfo = $derived.by(() => {
+    let xp = userState.xp;
+    let level = 1, required = 100, accumulated = 0;
+    while (xp >= accumulated + required) {
+      accumulated += required;
+      level++;
+      required = level * 100 + (level - 1) * 50;
+    }
+    return { level, currentXp: xp - accumulated, requiredXp: required, progress: (xp - accumulated) / required };
+  });
 
   let unsubUser;
 
   onMount(() => {
     userStore.load();
     unsubUser = userStore.subscribe(v => { userState = v; });
-    levelInfo = userStore.getLevelProgress();
   });
 
   onDestroy(() => {
