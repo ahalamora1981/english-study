@@ -6,7 +6,7 @@
     onResult(correct, 10);
   }
 
-  $: if (word) flipped = false; // Reset flip on new word
+  $effect(() => { if (word) flipped = false; });
 </script>
 
 {#if word}
