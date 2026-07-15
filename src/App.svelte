@@ -10,6 +10,7 @@
   import { wordsStore } from './stores/words.js';
   import { settingsStore } from './stores/settings.js';
   import { on } from './lib/notifications.js';
+  import './styles/animations.css';
 
   // Simple hash-based routing
   const routes = {

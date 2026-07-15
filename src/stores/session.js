@@ -110,7 +110,9 @@ function createSessionStore() {
     isComplete() {
       let state;
       const unsub = subscribe(s => { state = s; }); unsub();
-      return state.active && state.currentIndex >= state.words.length;
+      // True if session is still active and past the last word, or if it ended after advancing past the last word
+      return state.active && state.currentIndex >= state.words.length
+        || (!state.active && state.totalAnswered > 0 && state.words.length > 0 && state.currentIndex >= state.words.length - 1);
     }
   };
 }

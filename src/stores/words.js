@@ -28,12 +28,6 @@ function createWordsStore() {
   return {
     subscribe,
     load() { ensureLoaded(); },
-    save() {
-      update(state => {
-        set(STORAGE_KEYS.WORD_MASTERY, state.mastery);
-        return state;
-      });
-    },
     getDueWords() {
       ensureLoaded();
       let state;

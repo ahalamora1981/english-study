@@ -1,4 +1,7 @@
 <script>
+  import { router } from 'svelte-spa-router';
+  let activeRoute = $derived(router.location);
+
   const items = [
     { path: '/', label: '首页', labelEn: 'Home', icon: 'home' },
     { path: '/study', label: '学习', labelEn: 'Study', icon: 'study' },
@@ -60,7 +63,7 @@
     width: 24px;
     height: 24px;
   }
-  :global(.active) .nav-icon {
+  .nav-item.active .nav-icon {
     stroke-width: 2.5;
   }
   .nav-label {

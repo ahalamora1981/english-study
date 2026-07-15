@@ -59,22 +59,6 @@ function createUserStore() {
       }
       _loaded = true;
     },
-    save() {
-      update(state => {
-        set(STORAGE_KEYS.USER, {
-          xp: state.xp,
-          level: state.level,
-          streak: state.streak,
-          lastStudyDate: state.lastStudyDate,
-          dailyGoal: state.dailyGoal,
-          totalWordsLearned: state.totalWordsLearned,
-          unlockedBadges: state.unlockedBadges,
-          perfectSessions: state.perfectSessions,
-          allMastered: state.allMastered
-        });
-        return state;
-      });
-    },
     setAllMastered() {
       update(state => {
         if (state.allMastered) return state;
@@ -108,12 +92,21 @@ function createUserStore() {
       update(state => {
         const result = { ...state };
 
-        // Streak
+        // Streak: only increment once per day
         if (state.lastStudyDate) {
           const last = new Date(state.lastStudyDate);
           const curr = new Date(today);
           const diffDays = Math.floor((curr - last) / (1000 * 60 * 60 * 24));
-          result.streak = diffDays <= 1 ? state.streak + 1 : 1;
+          if (diffDays === 0) {
+            // Same day — keep streak unchanged
+            result.streak = state.streak;
+          } else if (diffDays === 1) {
+            // Consecutive day — increment
+            result.streak = state.streak + 1;
+          } else {
+            // Gap — reset
+            result.streak = 1;
+          }
         } else {
           result.streak = 1;
         }

@@ -1,7 +1,8 @@
 <script>
+  import { STAGES } from '../lib/sm2.js';
   let { totalWords = 100, stages = {} } = $props();
 
-  const stageLabels = ['未学习', '初识', '熟悉', '掌握', '熟练', '精通'];
+  const stageLabels = STAGES.map(s => s.label);
   const stageColors = [
     '#EF4444',
     '#F97316',
