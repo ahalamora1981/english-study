@@ -17,13 +17,15 @@
     '/dictionary': Dictionary, '/achievements': Achievements,
   };
 
-  let currentRoute = $state('/');
+  let currentRoute = $state(
+    location.hash.startsWith('#/') ? location.hash.slice(1) : '/'
+  );
   let showWelcome = $state(false);
   let toast = $state({ message: '', type: 'info' });
   let unsubs = [];
 
   function updateRoute() {
-    const hash = window.location.hash;
+    const hash = location.hash;
     currentRoute = hash.startsWith('#/') ? hash.slice(1) : '/';
   }
 
@@ -34,7 +36,6 @@
     wordsStore.load();
     settingsStore.load();
 
-    updateRoute();
     window.addEventListener('hashchange', updateRoute);
 
     const unsub = userStore.subscribe(state => {

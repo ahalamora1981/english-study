@@ -1,7 +1,7 @@
 <script>
   import { onMount, onDestroy } from 'svelte';
 
-  let activeRoute = $state('/');
+  let activeRoute = $state(location.hash.startsWith('#/') ? location.hash.slice(1) : '/');
 
   function updateRoute() {
     const hash = window.location.hash;
@@ -9,7 +9,6 @@
   }
 
   onMount(() => {
-    updateRoute();
     window.addEventListener('hashchange', updateRoute);
   });
 
